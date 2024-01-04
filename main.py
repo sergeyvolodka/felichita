@@ -50,7 +50,7 @@ def callback(call):
     if call.data.startswith('1'):
         img1 = open('image/хирургия.jpg', 'rb')
         bot.send_photo(call.message.chat.id, img1)
-        bot.send_message(call.message.chat.id, text='Консультация и диагностика стоматолога-имплантолога 500₽'
+        bot.send_message(call.message.chat.id, text='Консультация и диагностика стоматолога-имплантолога 1000₽'
                                                     'Удаление зуба от 2600Удаление зуба мудрости от 4000₽'
                                                     'Имплантат MIS SEVEN (Израиль) с установкой -27000₽'
                                                     'Имплантат MIS Seven под ключ(установка имплантата+коронка) от 54000₽'
