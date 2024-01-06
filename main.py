@@ -14,7 +14,8 @@ def main_menu():
     btn4 = '💬\nЗаписаться на прием'
     btn5 = "👨‍⚕️👩‍⚕️Наша команда"
     btn6 = '📞📩\nКонтакты'
-    markup.add(btn1, btn2, btn4, btn5, btn6)
+    btn7 = 'Мои бонусы'
+    markup.add(btn1, btn2, btn4, btn5, btn6, btn7)
     return markup
 
 
@@ -30,14 +31,6 @@ def info():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn2 = '🏡Главное меню'
     markup.add(btn2)
-    return markup
-
-
-def bonus():
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = 'Мои бонусы'
-    btn2 = '🏡Главное меню'
-    markup.add(btn1, btn2)
     return markup
 
 
@@ -158,10 +151,10 @@ def main(message):
                                                'стоматологической клиники "Феличита". Здесь вы можете подробнее узнать'
                                                ' о клинике и записаться на прием', reply_markup=main_menu())
     if message.text == 'Мои бонусы':
-        img1 = open('image/-1.jpg','rb')
-        bot.send_photo(message.chat.id,img1)
-        img2 = open('image/-2.jpg','rb')
-        bot.send_photo(message.chat.id,img2)
+        img1 = open('image/-1.jpg', 'rb')
+        bot.send_photo(message.chat.id, img1)
+        img2 = open('image/-2.jpg', 'rb')
+        bot.send_photo(message.chat.id, img2, reply_markup=info())
 
     if message.text == '💬\nЗаписаться на прием':
         bot.send_message(message.chat.id, text='Telegram', reply_markup=contacts())
