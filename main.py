@@ -159,8 +159,9 @@ def main(message):
                                                ' о клинике и записаться на прием', reply_markup=main_menu())
     if message.text == 'Мои бонусы':
         img1 = open('image/-1.jpg','rb')
+        bot.send_photo(message.chat.id,img1)
         img2 = open('image/-2.jpg','rb')
-        bot.send_photo(message.chat.id,img1,img2)
+        bot.send_photo(message.chat.id,img2)
 
     if message.text == '💬\nЗаписаться на прием':
         bot.send_message(message.chat.id, text='Контакты', reply_markup=contacts())
