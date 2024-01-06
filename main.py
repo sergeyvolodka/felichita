@@ -164,7 +164,7 @@ def main(message):
         bot.send_photo(message.chat.id,img2)
 
     if message.text == '💬\nЗаписаться на прием':
-        bot.send_message(message.chat.id, text='Контакты', reply_markup=contacts())
+        bot.send_message(message.chat.id, text='Telegram', reply_markup=contacts())
 
     if message.text == '📞📩\nКонтакты':
         img2 = open('image/felichita.jpg', 'rb')
