@@ -33,6 +33,14 @@ def info():
     return markup
 
 
+def bonus():
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    btn1 = 'Мои бонусы'
+    btn2 = '🏡Главное меню'
+    markup.add(btn1, btn2)
+    return markup
+
+
 def services():
     markup = types.InlineKeyboardMarkup()
     btn1 = types.InlineKeyboardButton(text="Хирургия/имплантология", callback_data='1')
@@ -121,7 +129,8 @@ def main(message):
         img6 = open('image/логачева.jpg', 'rb')
         bot.send_photo(message.chat.id, img6, caption='Логачёва  Надежда Васильевна, врач-стоматолог-терапевт')
         img7 = open('image/надежда.jpg', 'rb')
-        bot.send_photo(message.chat.id, img7,caption='Николаева Надежда Ивановна,врач-стоматолог-терапевт, пародонтолог',
+        bot.send_photo(message.chat.id, img7,
+                       caption='Николаева Надежда Ивановна,врач-стоматолог-терапевт, пародонтолог',
                        reply_markup=comanda())
 
     if message.text == '🏥\nО клинике':
@@ -148,6 +157,10 @@ def main(message):
         bot.send_message(message.chat.id, text='Добро пожаловать! Вас приветствует официальный робот-помощник '
                                                'стоматологической клиники "Феличита". Здесь вы можете подробнее узнать'
                                                ' о клинике и записаться на прием', reply_markup=main_menu())
+    if message.text == 'Мои бонусы':
+        img1 = open('image/-1.jpg','rb')
+        img2 = open('image/-2.jpg','rb')
+        bot.send_photo(message.chat.id,img1,img2)
 
     if message.text == '💬\nЗаписаться на прием':
         bot.send_message(message.chat.id, text='Контакты', reply_markup=contacts())
@@ -167,7 +180,7 @@ def main(message):
         bot.send_photo(message.chat.id, img11)
 
         bot.send_message(message.chat.id, text='*Мы 3 года подряд в премии Продокторов входим в топ-10 клиник Нижнего '
-                                               'Новгорода и Нижегородской области* ',parse_mode='Markdown',
+                                               'Новгорода и Нижегородской области* ', parse_mode='Markdown',
                          reply_markup=comanda())
 
 
