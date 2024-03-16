@@ -107,22 +107,25 @@ def start(message):
 @bot.message_handler(content_types=['text'])
 def main(message):
     if message.text == "👨‍⚕️👩‍⚕️Наша команда":
-        img1 = open('image/petr.jpg', 'rb')
+        img1 = open('image/лпф.jpg', 'rb')
         bot.send_photo(message.chat.id, img1, caption='Лынов Петр Федорович, врач-стоматолог-ортопед высшей категории, '
                                                       'главный врач клиники')
-        img2 = open('image/логач.jpg', 'rb')
+        img2 = open('image/абрамова.jpg', 'rb')
         bot.send_photo(message.chat.id, img2, caption='Абрамова Елена Евгеньевна, врач-стоматолог-терапевт')
         img3 = open('image/лида.jpg', "rb")
         bot.send_photo(message.chat.id, img3, caption='Васильева Лидия Николаевна, врач-стоматолог-хирург, имплантолог')
-        img4 = open('image/женя.jpg', 'rb')
+        img4 = open('image/женч.jpg ', 'rb')
         bot.send_photo(message.chat.id, img4, caption='Сумская Евгения Ивановна, врач-стоматолог-терапевт')
         img5 = open('image/ястребова.jpg', 'rb')
         bot.send_photo(message.chat.id, img5, caption='Ястребова Екатерина Олеговна,врач-ортодонт')
-        img6 = open('image/логачева.PNGjpg', 'rb')
+        img6 = open('image/лог.jpg', 'rb')
         bot.send_photo(message.chat.id, img6, caption='Логачёва  Надежда Васильевна, врач-стоматолог-терапевт')
         img7 = open('image/надя.jpg', 'rb')
         bot.send_photo(message.chat.id, img7,
                        caption='Николаева Надежда Ивановна,врач-стоматолог-терапевт, пародонтолог',
+                       reply_markup=comanda())
+        img8= open('image/катя.jpg', 'rb')
+        bot.send_photo(message.chat.id,img8,caption='Лынова Екатерина Николаевна, врач-стоматолог-ортопед',
                        reply_markup=comanda())
 
     if message.text == '🏥\nО клинике':
@@ -171,7 +174,7 @@ def main(message):
         bot.send_photo(message.chat.id, img10)
         img11 = open('image/т1.jpg', 'rb')
         bot.send_photo(message.chat.id, img11)
-        img12=open('image/лидф 1 место.avif','rb')
+        img12=open('image/Снимок.jpg','rb')
         bot.send_photo(message.chat.id,img12)
 
         bot.send_message(message.chat.id, text='*Мы 3 года подряд в премии Продокторов входим в топ-10 клиник Нижнего '
