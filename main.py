@@ -157,6 +157,10 @@ def main(message):
         bot.send_photo(message.chat.id, img1)
         img2 = open('image/-2.jpg', 'rb')
         bot.send_photo(message.chat.id, img2, reply_markup=info())
+        bot.send_message(message.chat.id, text='*Присоединиться к нашей бонусной программе можно по ссылке:*\n'
+                                               'https://felichita.uds.app/c/join?ref=rutj4648',parse_mode="Markdown",
+        reply_markup=info())
+
 
     if message.text == '💬\nЗаписаться на прием':
         bot.send_message(message.chat.id, text='Telegram', reply_markup=contacts())
@@ -167,7 +171,8 @@ def main(message):
         bot.send_message(message.chat.id, text='Мы находимся в Нижнем Новгороде, на улице Мануфактурная, дом 10.\n'
                                                'Ссылка на яндекс карты - https://yandex.ru/maps/org/felichita/1407739629\n'
                                                'Ссылка на сайт - https://felichita-stom.ru/ '
-                                               '\nНомер телефона  +7 (831) 218-02-30', reply_markup=info())
+                                               '\nНомер телефона  +7 (831) 218-02-30',
+                         reply_markup=info())
 
     if message.text == '🏆Наши достижения':
         img10 = open('image/топ 10.jpg', 'rb')
