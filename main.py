@@ -14,7 +14,7 @@ def main_menu():
     btn5 = "👨‍⚕️👩‍⚕️Наша команда"
     btn6 = '📞📩\nКонтакты'
     btn7 = '💰Мои бонусы'
-    btn8 = 'Фелиал Бетанкура 29'
+    btn8 = '🦷Фелиал Бетанкура 29'
     markup.add(btn1, btn2, btn4, btn5, btn6, btn7,btn8)
     return markup
 
@@ -186,10 +186,13 @@ def main(message):
         bot.send_message(message.chat.id, text='*Мы 3 года подряд в премии Продокторов входим в топ-10 клиник Нижнего '
                                                'Новгорода и Нижегородской области* ', parse_mode='Markdown',
                          reply_markup=comanda())
-    if message.text == 'Фелиал Бетанкура 29🦷':
+
+    if message.text == '🦷Фелиал Бетанкура 29':
         bot.send_message(message.chat.id,
-                         text='https://drive.google.com/drive/folders/1GqY20L5RJYeRG82L5T-UE-au_q2XNLhw?usp=drive_link',
-                         reply_markup=info())
+                         text='*Друзья, мы рады сообщить Вам прекрасную новость! В стоматологической клинике "Феличита\n" '
+                              'открылся центр имплантологии по адресу: ул. Бетанкура, д.29, П7\n'
+                              'https://drive.google.com/drive/folders/1GqY20L5RJYeRG82L5T-UE-au_q2XNLhw?usp=drive_link*',
+                         parse_mode='Markdown',reply_markup=info())
 
 
 bot.polling(non_stop=True)
