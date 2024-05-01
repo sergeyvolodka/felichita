@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 from config import TOKEN
-
+import time
 bot = telebot.TeleBot(TOKEN)
 
 
@@ -115,12 +115,14 @@ def main(message):
         bot.send_photo(message.chat.id, img2, caption='Абрамова Елена Евгеньевна, врач-стоматолог-терапевт')
         img3 = open('image/лида.jpg', "rb")
         bot.send_photo(message.chat.id, img3, caption='Васильева Лидия Николаевна, врач-стоматолог-хирург, имплантолог')
+        time.sleep(1)
         img4 = open('image/женч.jpg ', 'rb')
         bot.send_photo(message.chat.id, img4, caption='Сумская Евгения Ивановна, врач-стоматолог-терапевт')
         img5 = open('image/ястребова.jpg', 'rb')
         bot.send_photo(message.chat.id, img5, caption='Ястребова Екатерина Олеговна,врач-ортодонт')
         img6 = open('image/лог.jpg', 'rb')
         bot.send_photo(message.chat.id, img6, caption='Логачёва  Надежда Васильевна, врач-стоматолог-терапевт')
+        time.sleep(1)
         img7 = open('image/надя.jpg', 'rb')
         bot.send_photo(message.chat.id, img7,
                        caption='Николаева Надежда Ивановна,врач-стоматолог-терапевт, пародонтолог',
